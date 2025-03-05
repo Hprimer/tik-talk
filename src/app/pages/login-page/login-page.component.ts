@@ -14,6 +14,11 @@ export class LoginPageComponent{
   authService = inject(AuthService)
   router =inject(Router)
 
+  showPassword = false;
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+  
   form = new FormGroup ({
     username: new FormControl(null, Validators.required),
     password: new FormControl(null, Validators.required),

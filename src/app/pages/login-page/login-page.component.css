@@ -8,3 +8,11 @@
 .login-btn{
 	width: 100%;
 }
+.tt-control-label{
+	position: relative;
+}
+.material-icons{
+	position: absolute;
+	top: 35px;
+	right: 10px;
+}

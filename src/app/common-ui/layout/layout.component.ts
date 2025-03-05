@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SideBarComponent } from '../sideBar/sideBar.component';
+import { ProfilesService } from '../../data/services/profiles.service';
 
 @Component({
   selector: 'app-layout',
@@ -11,11 +12,12 @@ import { SideBarComponent } from '../sideBar/sideBar.component';
     SideBarComponent,
   ]
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent  {
+  profileService = inject(ProfilesService) 
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnItit(){
+    
   }
+
 
 }

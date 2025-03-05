@@ -1,3 +1,30 @@
-<p>
-  sideBar works!
-</p>
+<div class="sidebar">
+  <div class="logo-block">
+    <div class="logo">Tik-Talk</div>
+  </div>
+  <div class="nav-block">
+    <div class="nav-btn">
+      <mat-icon>home</mat-icon>
+      <span >Моя страница  </span>
+    </div>
+    <div class="nav-btn">
+      <mat-icon>mail</mat-icon>
+      <span >Чаты </span>
+    </div>
+    <div class="nav-btn">
+      <mat-icon>search</mat-icon>
+      <span >Поиск</span>
+    </div>
+    <app-subscriber-card/>
+
+    <pre>{{subscribers$ | async | json}}</pre>
+
+    <div class="more-subscribers">
+      <a 
+      class="more-subscribers-link"
+      [routerLink]="['/subscribers']"
+      >Все подписчики</a>
+    </div>
+  </div>
+  
+</div>

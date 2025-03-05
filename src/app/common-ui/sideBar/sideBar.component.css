@@ -1,0 +1,36 @@
+
+.logo-block{
+	display: flex;
+	align-items: center;	
+	flex-direction: column;
+}
+.logo{
+	width: 80%;
+	font-size: 50px;
+	color: var(--primary);
+}
+.nav-block{
+	display: flex;
+	align-items: center;	
+	flex-direction: column;
+}
+.nav-btn{
+	cursor: pointer;
+	color:var(--white);
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	gap: 12px;
+	padding: 12px;
+	width: 80%;
+	/* transition: all .5s ease; */
+}
+.nav-btn:hover{
+	background-color: rgb(163 70 184 / 11%);;
+	color:var(--primary);
+	/* color: rgb(44, 14, 72); */
+}
+.more-subscribers-link{
+	text-decoration: none;
+	color: var(--primary);
+}

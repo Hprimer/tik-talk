@@ -8,7 +8,7 @@ import { Profile } from './data/interfaces/profile.interface';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet, 
+    RouterOutlet,
   ],
 
   templateUrl: './app.component.html',

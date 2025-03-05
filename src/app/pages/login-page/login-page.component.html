@@ -10,7 +10,15 @@
   </label>
   <label class="tt-control-label">
     Password
-    <input class="tt-input" type="password" placeholder="Введите пароль" formControlName="password">
+
+    <input class="tt-input"
+      [type]="showPassword ? 'text' : 'password'" 
+      formControlName="password"
+      placeholder="Введите пароль" 
+    />
+    <span class="material-icons" (click)="togglePasswordVisibility()">
+      {{ showPassword ? 'visibility_off' : 'visibility' }}
+    </span>
   </label>
   <div class="btn-box">
     <button type="submit" class="btn login-btn">Войти</button>

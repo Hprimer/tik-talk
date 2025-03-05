@@ -1,4 +1,5 @@
 :host{
 	display: grid;
 	grid-template-columns: 300px 1fr;
+	background: linear-gradient(43deg, #000000, #3d097f);
 }
