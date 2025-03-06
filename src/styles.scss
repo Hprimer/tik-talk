@@ -8,7 +8,7 @@
 
 body{	
 	color:var(--white);
-	// background: linear-gradient(43deg, #000000, #3d097f); находится в layout
+	background: linear-gradient(43deg, #000000, #3d097f); //+ находится в layout
 	margin: 0;
 }
 .logo{
@@ -49,8 +49,8 @@ body{
 
 }
 .tt-control-label{
-	font-weight: 700;
-	font-size: 12px;
+	font-weight: 600;
+	font-size: 14px;
 	line-height: 16px;
 
 }

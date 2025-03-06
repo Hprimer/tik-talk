@@ -2,22 +2,25 @@
   <div class="logo-block">
     <div class="logo">Tik-Talk</div>
   </div>
-  <div class="nav-block">
+  <div class="nav-block" [routerLink]="['/profile']">
     <div class="nav-btn">
       <mat-icon>home</mat-icon>
       <span >Моя страница  </span>
     </div>
-    <div class="nav-btn">
+    <div class="nav-btn" [routerLink]="['/chats']">
       <mat-icon>mail</mat-icon>
       <span >Чаты </span>
     </div>
-    <div class="nav-btn">
+    <div class="nav-btn" [routerLink]="['/search']">
       <mat-icon>search</mat-icon>
-      <span >Поиск</span>
+      <span>Поиск</span>
     </div>
     <app-subscriber-card/>
 
-    <pre>{{subscribers$ | async | json}}</pre>
+    @for (profile of subscribers$ |async;track profileService){
+      <app-subscriber-card
+      [profile]="profile"></app-subscriber-card>
+    }
 
     <div class="more-subscribers">
       <a 
@@ -25,6 +28,19 @@
       [routerLink]="['/subscribers']"
       >Все подписчики</a>
     </div>
+
+    <footer class="sidebar_footer">
+      @if (me(); as me){
+        @if (me.avatarUrl){
+          <img class='sidebar_footer_img' [src]="me.avatarUrl | imgUrl">
+        }@else {
+          <img class='sidebar_footer_img' src="assets/imgs/Leonardo.jpg" alt="">
+        }
+        <div class="username-text">{{me.username}}</div>
+        <mat-icon class="settings">settings</mat-icon>
+      }
+      
+    </footer>
   </div>
   
 </div>
