@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "homepage": "https://hprimer.github.io/Tik-Talk",
   "scripts": {
+    "predeploy": "ng build --output-path docs --base-href /tik-talk/",
+    "deploy": "gh-pages -d docs",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
