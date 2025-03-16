@@ -24,6 +24,7 @@
 	padding: 12px;
 	width: 80%;
 	/* transition: all .5s ease; */
+	user-select: none;
 }
 .nav-btn:hover{
 	background-color: rgb(163 70 184 / 11%);

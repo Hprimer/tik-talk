@@ -2,16 +2,16 @@
   <div class="logo-block">
     <div class="logo">Tik-Talk</div>
   </div>
-  <div class="nav-block" [routerLink]="['/profile']">
+  <div class="nav-block">
     <div class="nav-btn">
       <mat-icon>home</mat-icon>
       <span >Моя страница  </span>
     </div>
-    <div class="nav-btn" [routerLink]="['/chats']">
+    <div class="nav-btn" >
       <mat-icon>mail</mat-icon>
       <span >Чаты </span>
     </div>
-    <div class="nav-btn" [routerLink]="['/search']">
+    <div class="nav-btn" >
       <mat-icon>search</mat-icon>
       <span>Поиск</span>
     </div>
@@ -29,7 +29,7 @@
       >Все подписчики</a>
     </div>
 
-    <footer class="sidebar_footer">
+    <footer class="sidebar_footer" [routerLink]="['/']">
       @if (me(); as me){
         @if (me.avatarUrl){
           <img class='sidebar_footer_img' [src]="me.avatarUrl | imgUrl">

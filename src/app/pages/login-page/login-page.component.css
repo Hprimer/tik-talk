@@ -15,8 +15,59 @@
 .tt-control-label{
 	position: relative;
 }
-.material-icons{
+.enter{
+	position: relative;
+}
+.eye_icon{
 	position: absolute;
 	top: 35px;
 	right: 10px;
+	cursor: pointer;
+}
+.info-icon{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 33px;
+	cursor: pointer;
+	color: var(--primary);
+}
+.info-icon {
+  animation: scaleAnimation 2s infinite;
+}
+.info-icon.clicked {
+  animation: none;
+	transform: scale(1.2);
+}
+.info-icon:hover{
+ 	transform: scale(1.2);
+	animation: none;
+}
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Увеличение */
+  }
+  100% {
+    transform: scale(1); /* Возвращение к исходному размеру */
+  }
+}
+
+.tooltip {
+  position: absolute;
+  right: -60px;
+  top: -90px;
+  transform: translateX(-50%);
+  background-color: var(--primary);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.tooltip-hidden {
+  opacity: 0;
+  pointer-events: none;
 }

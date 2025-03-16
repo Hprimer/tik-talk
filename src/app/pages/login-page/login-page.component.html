@@ -6,7 +6,31 @@
   <div class="logo-block">
     <div class="logo login_page_logo">Tik-Talk</div>
   </div>
-  <h1>Вход</h1>
+  <!-- <div class="enter">
+    <h1>Вход</h1>
+    <span class="material-icons info-icon">
+      {{'info'}}
+    </span>
+  </div> -->
+
+  <div class="enter">
+    <h1>Вход</h1>
+    <span class="material-icons info-icon" 
+      [class.clicked]="iconClicked" 
+      (click)="toggleTooltip(); iconClicked = true"
+      (mouseover)="showOnHover = true" 
+      (mouseout)="showOnHover = false"
+      >
+      info
+    </span>
+    <!-- <div class="tooltip" [class.tooltip-hidden]="!showTooltip"> -->
+    <div class="tooltip" [class.tooltip-hidden]="!showTooltip && !showOnHover">
+      <p>user: naaaailsSsS</p>
+      <p>pass: 4oHJPH2p0k</p>
+    </div>
+  </div>
+  
+
   <label class="tt-control-label">
     Telegram username
     <input class="tt-input" type="text" placeholder="Введите логин" formControlName="username">
@@ -19,7 +43,7 @@
       formControlName="password"
       placeholder="Введите пароль" 
     />
-    <span class="material-icons" (click)="togglePasswordVisibility()">
+    <span class="material-icons eye_icon" (click)="togglePasswordVisibility()">
       {{ showPassword ? 'visibility_off' : 'visibility' }}
     </span>
   </label>

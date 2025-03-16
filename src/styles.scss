@@ -43,6 +43,7 @@ body{
 	justify-content: center;
 	cursor: pointer;
 	transition: transform .5s ease;
+	user-select: none;
 }
 .btn:hover{
 	transform: scale(1.15);

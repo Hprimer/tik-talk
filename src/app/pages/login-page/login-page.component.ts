@@ -11,6 +11,13 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent{
 
+  showTooltip = false;
+  showOnHover = false;
+  iconClicked = false;
+  toggleTooltip() {
+    this.showTooltip = !this.showTooltip;
+  }
+
   authService = inject(AuthService)
   router =inject(Router)
 
@@ -36,4 +43,5 @@ export class LoginPageComponent{
       })
     }
   }
+  
 }
